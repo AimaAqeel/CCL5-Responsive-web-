@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Watch.it</title>
+        <link rel = "stylesheet" href = "CCL-5Task-2AdvanceLayout.css">
+    <head>
+    <body>
+        <div class = "navigation">
+            <!--Navigation bar logo-->
+            <div id = "logo">Watch.it</div>
+
+            <!--Nav list-->
+            <div class = "navigation">
+                <div id = "nav1">ACTION</div>
+                <div id = "nav2">COMEDY</div>
+                <div id = "nav3">ROMANCE</div>
+                <div id = "nav4">DRAMA</div>
+            </div>
+
+            <!--add search button in nav bar-->
+            <button type = "button" id = "search">SEARCH</button>
+        </div>
+        <!--add main contect-->
+        <div class = 'maincontent'>
+
+          <!--add  barbie movie 1-->
+            <div class = "mov-1">
+              <div class = "img1"><img src = "barbie.jpg"></div>
+              <p class = "info1">
+                  Step into the dazzling world of Barbie as she embarks on an unexpected journey from her perfect doll life to 
+                  the real world. Filled with humor, heart, and empowering messages, this vibrant adventure redefines 
+                  what it means to dream big!
+              </p>
+              <button type = "button" id = "button1">WATCH NOW</button>
+          </div>
+
+          <!--add Hook movie 2-->
+            <div class = "mov-2">
+                <div class = "img2"><img src = "hook.jpg"></div>
+                <p class = "info2">
+                    Rediscover Neverland in this thrilling twist on Peter Pan! Robin Williams stars as a grown-up Peter, 
+                    who must rediscover his inner child to rescue his kids from the clutches of Captain Hook. Adventure,
+                    magic, and nostalgia blend in this timeless family classic.
+                </p>
+                <button type = "button" id = "button2">WATCH NOW</button>
+            </div>
+
+            <!--add Hidden- figure movie 3-->
+            <div class = "mov-3">
+                <div class = "img3"><img src = "hidden-figures.jpg"></div>
+                <p class = "info3">
+                    Three unsung heroes of NASA's space race take the spotlight in this inspiring true story. 
+                    Battling discrimination and defying the odds, these brilliant African-American women prove that 
+                    intelligence, perseverance, and unity can change history and break barriers.
+                </p>
+                <button type = "button" id = "button3">WATCH NOW</button>
+            </div>
+
+            <!--add Who- frames-roger-rabbit movie 4-->
+            <div class = "mov-4">
+              <div class = "img4"><img src = "who-framed-roger-rabbit.jpg"></div>
+              <p class = "info4">
+                  In a world where cartoons and humans coexist, a detective must solve a zany, high-stakes mystery. 
+                  Packed with wild humor, groundbreaking animation, and noir twists, this unique film will pull you into
+                  a world where anything is possible!
+              </p>
+
+              <!--'WATCH NOW' is in two separate lines so the words can match the two lines showcased
+              in the wireframes. This is done by both CSS and HTML working together. -->
+              <button type = "button" id = "button4">WATCH NOW</button>
+          </div>
+
+          <!--add movie 5-->
+            <div class = "mov-5">
+                <div class = "img5"><img src = "palm-springs.jpg"></div>
+                <p class = "info5">
+                    A never-ending wedding day turns into an unforgettable time-loop romance! Stuck in the same day, two strangers 
+                    find love, chaos, and meaning in the most unexpected ways.
+                </p>
+                <button type = "button" id = "button5">WATCH NOW</button>
+            </div>
+
+            <!--add movie 6-->
+            <div class = "mov-6">
+              <div class = "img6"><img src = "la-la-land.jpg"></div>
+              <p class = "info6">
+                  Love, dreams, and the magic of LA take center stage in this musical masterpiece. Watch as two starry-eyed 
+                  artists navigate passion and ambition in a world where every moment feels like a cinematic spectacle!
+              </p>
+              <button type = "button" id = "button6">WATCH NOW</button>
+          </div>
+        </div>
+    </body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+
+/* Lato Font Family */
+  .lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Teko Font Family */
+.teko-regular {
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Desktop Wireframe (Default)
+  -------------------------
+  Note: All spacings are as indicated from the specification, except for certain paddings, heights and widths are adjusted to look more
+  like the wireframe. Flexbox is used in the navigation, and to adjust images to containers. Anything else is divided into grids.
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  background-color: #4DCCBD;
+  color: #070410;
+}
+
+img {
+  object-fit: cover;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+button {
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  background-color: #ffffff;
+  color: #070410;
+  padding: 16px;
+  border-radius: 16px;
+  border: none;
+}
+
+button search:hover {
+  background-color: #ffffff;
+  color: #070410;
+}
+
+/* Navigation bar */
+.navigation {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 16px;
+  grid-row: 1/2;
+  background-color: #231561;
+  color: white;
+  display: flex; 
+  flex-direction: row;
+/* Without align-items, the van options won't be vertically aligned, so this sets these elements equally*/
+  align-items: baseline;
+  gap: 16px;
+  box-shadow: 0 10px 0px 0px #070410;
+}
+
+#logo {
+  font-family: "Teko", sans-serif;
+  padding-left: 48px;
+  font-size: 3em;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2.5;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  top: -10%;
+}
+
+#nav1 {
+  grid-column: 1/2;
+  padding-right: 16px;
+}
+
+#nav2 {
+  grid-column: 2/3;
+  padding-right: 16px;
+}
+
+#nav3 {
+  grid-column: 3/4;
+  padding-right: 16px;
+}
+
+#nav4 {
+  grid-column: 4/5;
+  padding-right: 16px;
+}
+
+#search {
+  flex-grow: 0.4;
+  padding: 5px 16px 5px 16px;
+}
+
+/* Main content container for all the movies. */
+.maincontent {
+  display: grid;
+  grid-template-rows: 450px 800px 450px 450px 450px 10px;
+  grid-template-columns: repeat(2,1fr);
+  row-gap: 48px;
+  column-gap: 48px;
+  padding-inline: 48px;
+  margin-top: 48px;
+  grid-row: 2/4;
+  max-width: 900px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+/* Movie box containers, all are specified to have small type spacings.
+Note: To make styling more efficient, the classes that require the same properties are called normally but separated with commas
+I learned this in the second part.
+*/
+.mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+  font-size: 1.5em;
+  display: grid;
+  background-color: #4DCCBD;
+  box-shadow: 16px 16px #070410;
+  text-align: center;
+  align-items: center;
+  height: 450px;
+}
+
+.mov-1, .mov-4, .mov-5, .mov-6 {
+  grid-column: 1/3;
+}
+
+.info1, .info2, .info3, .info4, .info5, .info6 {
+  grid-area: info;
+  text-align: left;
+  padding-inline: 16px;
+  align-self:first baseline;
+}
+
+.info1, .info4, .info5, .info6 {
+  margin-top: 16px;
+}
+
+#button1, #button2, #button3, #button4, #button5, #button6 {
+  margin: 16px;
+  grid-area: button;
+  background-color: #070410;
+  color: white;
+}
+#button1:hover, #button2:hover, #button3:hover, #button4:hover, #button5:hover, #button6:hover {
+  background-color: #EEF36A; /* Change to white on hover */
+  color: #070410; /* Change text color to black on hover */
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6 {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+/* Add upper and left-side border for each movie box */
+.mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+  font-size: 1.5em;
+  display: grid;
+  background-color: #4DCCBD;
+  box-shadow: 16px 16px #070410;
+  text-align: center;
+  align-items: center;
+  height: 450px;
+  border-top: 8px solid #EEF36A; /* for top border */
+  border-left: 8px solid #EEF36A; /* for left-side border */
+}
+
+/* To add spaces inbetween areas in grid-template-areas, a dot is added to ascertain the 'space' */
+.mov-1 {
+  grid-template-rows: 1fr 16px 1fr;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-areas:
+  "image image image"
+  ". . button"
+  "info info button";
+}
+
+#button1 {
+  margin-right: 16px;
+  object-fit: cover;
+  padding: .75em;
+  width: 75%;
+  justify-self: right;
+}
+
+.info1 {
+  width: 100%;
+}
+
+.img1 img {
+  height: 220px;
+}
+
+.mov-2, .mov-3 {
+  display: grid; 
+  grid-template-rows: 200px 200px 250px 150px;
+  grid-template-columns: none;
+  grid-template-areas: 
+  "image"
+  "image"
+  "info"
+  "button";
+  height: 800px;
+}
+
+.info2, .info3 {
+  padding-top: 16px;
+}
+
+.img2 img, .img3 img {
+  height: 400px;
+}
+
+.mov-4, .mov-5, .mov-6 {
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+  grid-template-areas: 
+  "image image info info"
+  "image image button button";
+}
+
+.img-4 img, .img-5 img, .img-6 img {
+  height: 450px;
+}
+
+
+/* Tablet Wireframe 
+  ------------------
+  Note: One thing I'd like to point out here is that the blueprint for the movie layouts in Tablet are
+  repeated from the Desktop Wireframe, specifically the unique layouts of both .mov2 and .mov3. Of course
+  margins, paddings and spacings get carried over in the @media screen layouts so in order to rewrite them, a lot
+  of my CSS includes 0 values for properties, this essentially resets what was previously there and responds to the new grids and
+  spacings I create in the @media screens. This can also be seen back in part 1.
+*/
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+
+  #logo {
+    font-size: 2em;
+  }
+
+  .maincontent {
+    grid-template-rows: repeat(3,950px);
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 32px;
+    column-gap: 32px;
+    padding-inline: 32px;
+    margin-top: 32px;
+    max-width: 900px;
+    padding-bottom: 32px;
+  }
+  
+  .mov-1, .mov-2 {
+    grid-row: 1/2;
+  }
+
+  .mov-3, .mov-4 {
+    grid-row: 2/3;
+  }
+
+  .mov-5, .mov-6 {
+    grid-row: 3/4;
+  }
+
+  .mov-1, .mov-3, .mov-5 {
+    grid-column: 1/2;
+  }
+
+  .mov-2, .mov-4, .mov-6 {
+    grid-column: 2/3;
+  }
+
+  .mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+    display: grid; 
+    grid-template-rows: 200px 200px 250px 150px 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "image image"
+    "image image"
+    "info info"
+    "button button"
+    "button button";
+    height: 950px;
+  }
+  
+  .info1, .info2, .info3, .info4, .info5, .info6 {
+    width: 90%;
+    height: 70%;
+    padding-top: 16px;
+  }
+  
+  .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+    height: 400px;
+  }
+
+  /* In order to detect the line skip from the HTML code for 'WATCH NOW' the property 'white-space' is given 'pre-line' */
+  #button1, #button2, #button3, #button4, #button5, #button6 {
+    padding-inline: 16px;
+    margin-right: 0;
+    margin-left: 0;
+    object-fit: cover;
+    padding: .4em;
+    justify-self: center;
+    width: 95%;
+    height: 60%;
+    white-space: pre-line;
+  }
+
+  .info1, .info4, .info5, .info6 {
+    margin-top: 0;
+  }
+
+}
+
+/* Mobile Wireframe
+  ------------------
+Note: Everything here is otherwise copied from tablet, of course with certain changes being the single column movies.
+The genre options from the navigation dissapear from the wireframe, so in order to replicate a similar output, the
+genre ids are called and then set to display: none;. The box shadows in the wireframe are designed in a way that make it like
+there are borders separating each movie, so I had to rewrite the direction of the box shadow and place it underneath each 
+.mov class container.
+*/
+@media screen and (min-width: 360px) and (max-width: 720px) {
+
+  .navigation { box-shadow: 0 16px 0px 0px #4DCCBD; }
+
+  #nav1, #nav2, #nav3, #nav4 { display: none; }
+
+  #logo {
+    font-size: 2em;
+  }
+
+  .maincontent {
+    padding-top: 16px;
+    grid-template-rows: repeat(6,800px);
+    grid-template-columns: auto;
+    row-gap: 16px;
+    column-gap: 0;
+    padding-inline: 0;
+    margin-top: 0;
+    max-width: 900px;
+    padding-bottom: 16px;
+    box-shadow: 0 16px 0px 0px #4DCCBD;
+  }
+
+  .mov-1 { grid-row: 1/2;}
+  .mov-2 { grid-row: 2/3;}
+  .mov-3 { grid-row: 3/4;}
+  .mov-4 { grid-row: 4/5;}
+  .mov-5 { grid-row: 5/6;}
+
+  .mov-1, .mov-2, .mov-3, .mov-4, .mov-5, .mov-6 {
+    box-shadow: 0 16px 0px 0px #4DCCBD;
+    grid-column: 1/2;
+    display: grid; 
+    grid-template-rows: 200px 200px 200px 100px 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "image image"
+    "image image"
+    "info info"
+    "button button"
+    "button button";
+    height: 800px;
+  }
+  
+  .info1, .info2, .info3, .info4, .info5, .info6 {
+    width: 90%;
+    height: 70%;
+    padding-top: 16px;
+  }
+  
+  .img1 img, .img2 img, .img3 img, .img4 img, .img5 img, .img6 img {
+    height: 400px;
+  }
+
+  /* To prevent the words 'WATCH NOW' from being separated, the line skip is not counted anymore by setting white-space
+  to none; */
+  #button1, #button2, #button3, #button4, #button5, #button6 {
+    padding-inline: 0;
+    margin-right: 0;
+    margin-left: 0;
+    object-fit: cover;
+    padding: .4em;
+    width: 95%;
+    height: 50%;
+    white-space: none;
+    justify-self: center;
+  }
+
+  .info1, .info4, .info5, .info6 {
+    margin-top: 0;
+  }
+}
+</style>
+
+</html>
